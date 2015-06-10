@@ -10,6 +10,8 @@ private:
 	int number;
 public:
 	Scene();
+	Scene(Scene& s);
+	~Scene();
 	std::vector<Planet*> planet;
 	void setPlanetName(std::string name){ this->planetName = name; };
 	void setEntity(EntityType& t){ this->type = t; };
@@ -22,6 +24,5 @@ public:
 	void getStatistics();
 	void sceneUpdate();
 	int check();
-	~Scene();
 };
 #endif

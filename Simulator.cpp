@@ -1,4 +1,5 @@
 #include "Simulator.h"
+#include "Planet.h"
 #include <iostream>
 #include <sstream>
 #include <stdio.h>
@@ -56,7 +57,7 @@ void Simulator::Menu()
 	std::cout << "  (##########)         ##  ###      ##    ##        ##   ##" << std::endl;
 	std::cout << "   ----------          ##   ##      ##    ##        ##  ##" << std::endl;
 	std::cout << "   |########|          #######      ########        #####" << std::endl;
-	std::cout << "---------------------- #######      ########        ####" << std::endl;
+	std::cout << "---------------------- #######      ########        ####--------------------------------------------------------------------------------------------------------";
 	std::cout << "  WELCOME!YOU'RE THE NEW GOD! PLEASE, CHOOSE ACTION FROM BELOW\n";
 	std::cout << "  ====================================\n";
 	std::cout << "  1.  Create new planet\n";
@@ -68,8 +69,10 @@ void Simulator::Menu()
 	std::cout << "      add <name of planet> <number> <entity|animal|human|god> ";
 	std::cout << "\n";
 	std::cout << "  6.  Update\n";
-	std::cout << "  7.  Exit\n";
+	std::cout << "  7.  See MENU again\n";
+	std::cout << "  8.  Exit\n";
 	std::cout << "  ====================================\n";
+
 
 	do
 	{
@@ -80,7 +83,7 @@ void Simulator::Menu()
 		switch (selection)
 		{
 		case 1:
-			std::cout << "Congrats! You have " << howManyPlanets << " planet(s):\n";
+			std::cout << "Congrats! You'veS created the planet:\n";
 			m_player->CreatePlanets();
 			std::cout << "\n";
 			break;
@@ -122,10 +125,24 @@ void Simulator::Menu()
 			std::cout << "\n";
 			break;
 		case 6:
-			
+			std::cout << "Updating: ";
 			Update();
 			break;
-		case 7:
+		case 7: 
+			std::cout << "  1.  Create new planet\n";
+			std::cout << "  2.  Erase the population of a planet\n";
+			std::cout << "  3.  Destroy planet\n";
+			std::cout << "  4.  Get statistic about your planets\n";
+			std::cout << "  5.  Add population to some planet\n";
+			std::cout << "      Your command should look like this:\n ";
+			std::cout << "      add <name of planet> <number> <entity|animal|human|god> ";
+			std::cout << "\n";
+			std::cout << "  6.  Update\n";
+			std::cout << "  7.  See MENU again\n";
+			std::cout << "  8.  Exit\n";
+			std::cout << "  ====================================\n";
+			break;
+		case 8:
 			std::cout << "THANK YOU FOR PLAYING. GOODBYE!\n";
 			Sleep(999);
 			exit(0);

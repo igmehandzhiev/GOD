@@ -9,6 +9,7 @@ private:
 	std::string name;
 	std::vector<Entity*>population;
 public:
+	Planet(){};
 	Planet(std::string name);
 	std::string getName()const{ return this->name; }
 	int getPopulation()const{ return population.size(); }

@@ -40,6 +40,7 @@ void Planet::movePopulation()
 	{
 		population[j]->Move();
 	}
+	std::cout << "Population moving...";
 }
 
 void Planet::findPosition()
@@ -75,4 +76,5 @@ void Planet::Update(){
 	{
 		population[i]->DoAction();
 	}
+	std::cout << "DOingAction";
 }

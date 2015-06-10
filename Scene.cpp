@@ -2,6 +2,20 @@
 #include <iostream>
 #include "RandomGenerator.h"
 Scene::Scene(){}
+Scene::~Scene()
+{
+	while (!planet.empty())
+	{
+		delete planet.back();
+		planet.pop_back();
+	}
+}
+
+Scene::Scene(Scene& s)
+{
+	*this = s;
+}
+
 void Scene::createPlanets()
 {
 	RandomGenerator object;
@@ -18,7 +32,7 @@ void Scene::erasePopulation()
 		if (planet[i]->getName() == planetName.data())
 		{
 			planet[i]->erasePopulation();
-			std::cout << "You have just erased the population of a planet!\n";
+			std::cout << "You have just erased the population of the planet " << planet[i]->getName();
 			std::cout << "\n";
 			IStherePlanet = 1;
 		}
@@ -37,17 +51,21 @@ void Scene::destroyPlanet()
 	{
 		if (planet[i]->getName() == planetName.data())
 		{
-			planet.erase(planet.cbegin() + i);
-			std::cout << "You have just destroyed "<<i+1<<"th planet!\n";
-			std::cout << "\n";
 			IStherePlanet = 1;
-			break;
+			planet.erase(planet.cbegin() + i);
+			int c = i % 10;
+			switch (c)
+			{
+				case 0: std::cout << "You have just destroyed " << i + 1 << "st planet!\n\n"; break;
+				case 1: std::cout << "You have just destroyed " << i + 1 << "nd planet!\n\n"; break;
+				case 2: std::cout << "You have just destroyed " << i + 1 << "rd planet!\n\n"; break;
+				default: std::cout << "You have just destroyed " << i + 1 << "th planet!\n\n"; break;
+				break;
+			}
+			
 		}
-		else
-		IStherePlanet = 0;
 	}
 	if (IStherePlanet == 0) std::cout << "There is no such a planet!\n";
-
 }
 
 void Scene::addEntity()
@@ -86,21 +104,17 @@ int Scene::check()
 	return 1; 
 }
 
-Scene::~Scene()
-{
-	while (!planet.empty())
-	{
-		delete planet.back();
-		planet.pop_back();
-	}
-}
+
 
 void Scene::sceneUpdate()
 {
-	for (unsigned int i = 0;i<planet.size(); i++)
+	for (unsigned int i = 0;i<planet.size(); ++i)
 	{
 		planet[i]->movePopulation();
 		planet[i]->findPosition();
+		std::cout << "Population Moving...\n\n";
 	}
+	std::cout << "Population Moving...\n\n";
+	
 	
 }

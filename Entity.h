@@ -17,6 +17,8 @@ private:
 	State currentState;
 public:
 	Entity();
+	~Entity(){};
+	Entity(Entity& en);
 	Entity(std::string name1);
 	std::string getName(){ return name; }
 	void setName(std::string name1){ this->name = name1; }

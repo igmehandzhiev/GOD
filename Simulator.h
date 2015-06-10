@@ -2,6 +2,7 @@
 #define SIMULATOR_H
 #include "God.h"
 #include "CommandManager.h"
+#include "Planet.h"
 #include <thread>
 class Simulator
 {

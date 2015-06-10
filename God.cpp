@@ -2,8 +2,20 @@
 #include <iostream>
 God::God(std::string name) :Human(name){}
 
-God::God()
-{}
+God::God(){}
+God::~God()
+{
+	delete sc;
+}
+God::God(God& s)
+{ 
+	*this = s; 
+}
+God& God:: operator=(God& s)
+{
+	sc = s.sc;
+	return *this;
+}
 
 void God::CreatePlanets()
 {
@@ -42,15 +54,4 @@ int God::Check()
 {
 	sc->check();
 	return 0;
-}
-
-God::~God()
-{
-	delete sc;
-}
-
-God& God:: operator=(God& s)
-{
-	sc = s.sc;
-	return *this;
 }

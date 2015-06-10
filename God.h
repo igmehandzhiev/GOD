@@ -9,7 +9,7 @@ private:
 public:
 	God();
 	God(std::string name);
-	God(God& s){*this = s;}
+	God(God& s);
 	God& operator=(God& s);
 	void CreatePlanets();
 	void ErasePopulation(std::string planetName);

@@ -17,6 +17,10 @@ Entity::Entity(std::string name1)
 	this->name = name1;
 }
 
+Entity::Entity(Entity& en)
+{
+	*this = en;
+}
 void Entity::Attack(Entity& entity)
 {
 	RandomGenerator object;
