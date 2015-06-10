@@ -16,7 +16,7 @@ public:
 	void movePopulation();
 	void findPosition();
 	void addPopulation(EntityType type, int number);
-	void Planet::Update();
+	void Update();
 	~Planet();
 };
 #endif

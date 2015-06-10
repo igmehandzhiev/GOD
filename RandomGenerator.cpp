@@ -6,16 +6,16 @@ using namespace std;
 Point2D RandomGenerator::getRanodmCordinates()
 {
 	Point2D position;
-	srand((unsigned)time(0));                  // scrand() gives the random fucntion a new starting point time(NULL)garanties getting a new starting point every time
-	double x1 = rand() % 100 + 0;       //generates random numbers from 0 to 100
-	double y1 = rand() % 100 + 0;
+	srand((unsigned)time(0));                 
+	double x1 = rand() % 100 + 1;       
+	double y1 = rand() % 100 + 1;
 	position = Point2D(x1, y1);
 	return position;
 }
 
 std::string RandomGenerator::getRandomName()
 {
-	unsigned srand(time(0));
+	srand((unsigned)time(0));
 	std::string a = "ABNECASEDOFGHIUJEKSLNEMONOPYAEOSSTUVYZNEENAEOSEFHYILANOENSSTOEUVYAEFSOHOENENLAUSNOST";
 	std::string r;
 	int random_len;
@@ -35,14 +35,14 @@ void RandomGenerator::getRandomDamage(Entity& entity)
 	switch (code)
 	{
 	case 1:
-		entity.setEnergy(entity.getEnergy() - 1);
+		entity.setEnergy(entity.getEnergy() - 10);
 		break;
 	case 2:
-		entity.setStrenght(entity.getStrenght() - 1);
+		entity.setStrenght(entity.getStrenght() - 10);
 		break;
 	case 3:
-		entity.setEnergy(entity.getEnergy() - 0.5);
-		entity.setStrenght(entity.getEnergy() - 0.5);
+		entity.setEnergy(entity.getEnergy() - 5);
+		entity.setStrenght(entity.getEnergy() - 5);
 		break;
 	}
 }

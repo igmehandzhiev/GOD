@@ -4,17 +4,20 @@ Animal::Animal(std::string name) :Entity(name){}
 
 void Animal::Eat()
 {
-	setEnergy(getEnergy() + 1);
+	setEnergy(getEnergy() + 5);
+	setWeight(getWeight() + 10);
 }
 
 void Animal::Sleep()
 {
-	setEnergy(getEnergy() + 1);
+	setEnergy(getEnergy() + 10);
+	setWeight(getWeight() - 5);
 }
 
 void Animal::SearchingForFood()
 {
-	setEnergy(getEnergy() - 1);
+	setEnergy(getEnergy() - 10);
+	setWeight(getWeight() - 5);
 }
 
 void Animal::DoAction(State action)

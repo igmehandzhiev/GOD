@@ -4,7 +4,7 @@ Human::Human(std::string name) :Animal(name){}
 
 void Human::Analyse()
 {
-	if (getEnergy() < 1)
+	if (getEnergy() < 10)
 	{
 		Eat();
 		Sleep();
