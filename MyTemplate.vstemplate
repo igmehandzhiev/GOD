@@ -1,0 +1,43 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>GOD</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>GOD</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Project26.vcxproj" File="Project26.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">Project26.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Animal.cpp">Animal.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="CommandManager.cpp">CommandManager.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Entity.cpp">Entity.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="God.cpp">God.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Human.cpp">Human.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Main.cpp">Main.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Planet.cpp">Planet.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Point2D.cpp">Point2D.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="RandomGenerator.cpp">RandomGenerator.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Scene.cpp">Scene.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Simulator.cpp">Simulator.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Animal.h">Animal.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="CommandManager.h">CommandManager.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Entity.h">Entity.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Enum.h">Enum.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="God.h">God.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Human.h">Human.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Planet.h">Planet.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Point2D.h">Point2D.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="RandomGenerator.h">RandomGenerator.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Scene.h">Scene.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Simulator.h">Simulator.h</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
