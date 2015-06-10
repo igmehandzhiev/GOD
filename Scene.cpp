@@ -2,18 +2,14 @@
 #include <iostream>
 #include "RandomGenerator.h"
 Scene::Scene(){}
-Scene::~Scene()
-{
-	while (!planet.empty())
-	{
-		delete planet.back();
-		planet.pop_back();
-	}
-}
 
 Scene::Scene(Scene& s)
 {
 	*this = s;
+}
+Scene::~Scene()
+{
+	delete &planet;
 }
 
 void Scene::createPlanets()
@@ -52,7 +48,6 @@ void Scene::destroyPlanet()
 		if (planet[i]->getName() == planetName.data())
 		{
 			IStherePlanet = 1;
-			planet.erase(planet.cbegin() + i);
 			int c = i % 10;
 			switch (c)
 			{
@@ -62,6 +57,8 @@ void Scene::destroyPlanet()
 				default: std::cout << "You have just destroyed " << i + 1 << "th planet!\n\n"; break;
 				break;
 			}
+			delete planet[i];
+			planet.erase(planet.begin() + i);
 			
 		}
 	}

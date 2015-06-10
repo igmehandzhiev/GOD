@@ -5,14 +5,15 @@
 class Scene
 {
 private:
+	std::vector<Entity*>population;
 	std::string planetName;
 	EntityType type;
 	int number;
 public:
+	std::vector<Planet*> planet;
 	Scene();
 	Scene(Scene& s);
 	~Scene();
-	std::vector<Planet*> planet;
 	void setPlanetName(std::string name){ this->planetName = name; };
 	void setEntity(EntityType& t){ this->type = t; };
 	void setNumber(int n){ this->number = n; };

@@ -6,5 +6,4 @@ int main()
 	simulator.Run();
 	system("pause");
 	return 0;
-
 }
