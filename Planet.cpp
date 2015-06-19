@@ -9,10 +9,14 @@ Planet::Planet(std::string name){ this->name = name;  }
 void Planet::erasePopulation(){ population.clear(); }
 Planet::~Planet()
 {
-	for (int i = 0; i < population.size(); ++i)
-	{
-		population.erase(population.begin() + i);
-	}
+	int size = population.size();
+	std::cout << population.size();
+		for (unsigned int i = 0; i < size; i++)
+		{
+			delete population.back();
+			population.pop_back();
+		}
+		
 }
 void Planet::addPopulation(EntityType type, int number)
 {

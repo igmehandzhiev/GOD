@@ -17,7 +17,7 @@ private:
 	State currentState;
 public:
 	Entity();
-	~Entity(){};
+	virtual ~Entity(){};
 	Entity(Entity& en);
 	Entity(std::string name1);
 	std::string getName(){ return name; }

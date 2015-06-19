@@ -17,6 +17,6 @@ public:
 	void AddEntity(std::string planetName, int number, EntityType type);
 	void GetStatistics();
 	int Check();
-	~God();
+	virtual ~God();
 };
 #endif

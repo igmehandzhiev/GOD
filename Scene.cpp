@@ -9,7 +9,12 @@ Scene::Scene(Scene& s)
 }
 Scene::~Scene()
 {
-	delete &planet;
+	int size = planet.size();
+		for (unsigned int i = 0; i < size; i++)
+		{
+			delete planet.back();
+			planet.pop_back();
+		}
 }
 
 void Scene::createPlanets()
@@ -41,7 +46,6 @@ void Scene::erasePopulation()
 
 void Scene::destroyPlanet()
 {
-	check();
 	int IStherePlanet=0;
 	for (unsigned int i = 0; i < planet.size(); i++)
 	{
@@ -57,9 +61,10 @@ void Scene::destroyPlanet()
 				default: std::cout << "You have just destroyed " << i + 1 << "th planet!\n\n"; break;
 				break;
 			}
-			delete planet[i];
-			planet.erase(planet.begin() + i);
-			
+					delete planet[i];
+					planet.erase(planet.begin() + i);
+					std::cout << planet.size();
+					i--;
 		}
 	}
 	if (IStherePlanet == 0) std::cout << "There is no such a planet!\n";

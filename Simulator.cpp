@@ -154,6 +154,6 @@ void Simulator::Menu()
 			std::cout << std::endl;
 		}
 
-	} while (str != "7");
+	} while (str != "8");
 
 }
